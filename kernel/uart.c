@@ -4,8 +4,6 @@
 #include "../include/types.h"
 #include "../include/memlayout.h"
 
-// UART 设备的基地址，由QEMU模拟器指定
-#define UART0 0x10000000
 
 // UART 寄存器偏移量
 #define THR 0 // Transmit Holding Register

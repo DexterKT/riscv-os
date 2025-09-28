@@ -9,11 +9,11 @@ extern char ebss[];
 // __attribute__ ((aligned (16))) 确保栈数组按16字节对齐
 
 #define STACK_SIZE 4096
-__attribute__ ((aligned (16))) char stack[STACK_SIZE];
-char *stack_top = stack + STACK_SIZE;
+__attribute__ ((aligned (16))) char stack0[STACK_SIZE];
+char *stack_top = stack0 + STACK_SIZE;
 
 // C语言入口函数
-void start() {
+int main() {
     // 清零BSS段
     char *p;
     for (p = sbss; p < ebss; p++) {
