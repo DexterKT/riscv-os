@@ -23,6 +23,9 @@ int main() {
     // 输出 "Hello OS"
     uart_puts("Hello OS\n");
 
+    printf("Hello OS by printf! \n");
+
     // 进入无限循环
     for(;;) {}
 }
+

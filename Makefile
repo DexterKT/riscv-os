@@ -12,13 +12,16 @@ AS = $(TOOLPREFIX)as
 CFLAGS = -Wall -Werror -O -fno-omit-frame-pointer -ggdb -MD -mcmodel=medany
 CFLAGS += -fno-builtin
 CFLAGS += -Iinclude
-LDFLAGS = -T kernel/kernel.ld
+LDFLAGS =  -T kernel/kernel.ld
+
 
 # 定义需要编译的源文件
 OBJS = \
   kernel/entry.o \
   kernel/main.o \
   kernel/uart.o \
+  kernel/console.o \
+  kernel/printf.o 
 
 # 最终的目标是生成内核文件 kernel.elf
 all: kernel.elf
